@@ -612,7 +612,6 @@ Test the function on a few files to ensure it works as expected.
 1. Now that you have the c_info and time_info extracted for each file, create a pandas DataFrame to store this information along with the file path.
 
     ```python
-    Copy code
     import pandas as pd
 
     # Create a list to store the data
