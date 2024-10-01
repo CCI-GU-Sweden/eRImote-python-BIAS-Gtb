@@ -649,3 +649,5 @@ Test the function on a few files to ensure it works as expected.
 
 
 ## Bioimage analysis workflow
+
+Material will be based on this book: https://github.com/CamachoDejay/MyFavouriteBIAStool_NEUBIAS/blob/main/Example.ipynb
