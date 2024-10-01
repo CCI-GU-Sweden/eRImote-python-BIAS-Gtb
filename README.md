@@ -644,7 +644,7 @@ Test the function on a few files to ensure it works as expected.
 
 
 ## How to create your own kernel
-
+[How to create an environment and kernel](create_kernel/README.md)
 
 ## Introduction to microscopy images – images as scientific data I/O
 
