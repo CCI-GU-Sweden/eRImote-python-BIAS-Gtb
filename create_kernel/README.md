@@ -5,9 +5,9 @@ A kernel (or environment) is a specific setup of python version, modules and oth
 
 It allows you, in a convenient way, to have multiple versions of python and modules installed.
 
-Environements kan be "activted" when they should be used and "deactivated" when not needed anymore.
+Environements can be "activted" when they should be used and "deactivated" when not needed anymore.
 
-A kernel can be stored as a file and distributed to other people who want to try your experiments or run your code.
+An environment can be stored as a file and distributed to other people who want to try your experiments or run your code.
 
 
 ## Download miniconda
@@ -18,7 +18,9 @@ https://conda-forge.org/download
 
 or, in a terminal, execute
 
-```wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh```
+```
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+```
 
 **OBS!** On BAND make sure you download it directly to your home directory. ```wget``` will download to your current working directory but your browser might choose location for you!
 
@@ -125,9 +127,9 @@ Start jupyter lab again and check if something has changed!
 Conda allows you to export your environment to share it with others as well as allowing yout to install environments that are shared with you.
 To export one of your environments, activate the environment and type:
 ```
-conda env export > environment.yml
+conda env export > your_environment.yml
 ```
-This will store the needed data in the file ```environment.yml```
+This will store the needed data in the file ```your_environment.yml```
 
 In order to create an environment from a file you type, in a terminal:
 ```
@@ -136,7 +138,7 @@ conda env create -f environment.yml
 This will create an environment as specified in the file ```environment.yml```.
 
 Download this environment file to your computer and try to recreate the environment:
-[environment.yml](./environment.yml) (either by right clicking->save link as... or by using wget)
+[environment.yml](https://raw.githubusercontent.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb/refs/heads/main/create_kernel/environment.yml) (by clicking on the link and clicking on "download raw file" or by using )
 
 * What is the name of the environment?
 * What version of python does it contain?
