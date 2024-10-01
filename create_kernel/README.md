@@ -138,11 +138,13 @@ conda env create -f environment.yml
 This will create an environment as specified in the file ```environment.yml```.
 
 Download this environment file to your computer and try to recreate the environment:
-[environment.yml](https://raw.githubusercontent.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb/refs/heads/main/create_kernel/environment.yml) (by clicking on the link and clicking on "download raw file" or by using )
+[environment.yml](https://raw.githubusercontent.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb/refs/heads/main/create_kernel/environment.yml) (by right clicking on the link -> "save link as..." using ```wget``` )
 
 * What is the name of the environment?
 * What version of python does it contain?
 * Find a few other packages that are installed in the environment
+* Export the new environment to be used as a kernel i jupyter lab
+* Deactivate all conda environments
 
 Use some of the commands in the list below to answer the questions.
 
