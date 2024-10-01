@@ -155,6 +155,30 @@ Use some of the commands in the list below to answer the questions.
 
 * Deactivate environment (go back to base environment): ```conda deactivate``` 
 
+## Removing a kernel from jupyter (lab)
+In order to remove a kernel from jupyter you can use the ```jupyter kernelspec``` command like this:
+```
+jupyter kernelspec remove --name=name_of_kernel
+```
+efter this command 'name_of_kernel' will no longer be available in jupyter lab.
+
+To see available kernels use the command
+```
+jupyter kernelspec list
+```
+
+## Removing environments
+
+When you want to remove a conda environment you can use:
+```
+conda env remove -n name_of_environment
+```
+just make sure you have deactivated the environment or have another environment activated.
+
+CAVEATS: removing an environment does not remove it as a kernel from jupyter!
+
+* Remove all **_kernels_** you created from jupyter (NOT the original named python3)
+* Remove any conda **_environments_** you created
 
 
 ## More information / Documentation
