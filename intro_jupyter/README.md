@@ -663,6 +663,36 @@ Test the function on a few files to ensure it works as expected.
 - **Function:** You created a simple function to extract c_info and time_info from the file name.
 - **DataFrame:** You used pandas to store the extracted information in a DataFrame, which can be used for further analysis.
 
+## Exercise 7: Calculating Mean Pixel Values for Each Image
+
+Now that you have a DataFrame containing the file paths, channel information (`c_info`), and time information (`time_info`), it’s time to dive deeper into the image data.
+
+### Objective:
+
+Your task is to iterate over each row in the DataFrame, open the corresponding `.tif` image, and calculate the mean pixel intensity for each image.
+
+### Steps:
+
+1. **Iterate over the rows** of the DataFrame.
+   - You will need to access the `file_path` column to get the path of each image.
+
+2. **Open each image** using `skimage.io.imread` or any other preferred method for reading `.tif` files.
+
+3. **Calculate the mean pixel intensity** of each image using NumPy. The mean should represent the average intensity value of all pixels in the image.
+
+4. **Store the result** back into the DataFrame. You can create a new column to hold the mean pixel intensity for each image.
+
+### Questions to Consider:
+
+- What is the effect of different `c_info` or `time_info` on the mean intensity values? (You don’t need to analyze it yet, just think about it!)
+
+### Hints:
+- Use `df.iterrows()` or `df.apply()` to iterate over DataFrame rows.
+- The function `skimage.io.imread()` can help you read `.tif` images.
+- The `.mean()` method from NumPy can calculate the mean pixel intensity of an image.
+
+**Note:** This is an open-ended exercise, and there is no single correct way to approach the problem. Explore the possibilities and think creatively!
+
 
 # Return to main course page
 https://github.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb
