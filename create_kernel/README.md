@@ -12,7 +12,7 @@ An environment can be stored as a single file and distributed to other people wh
 
 A kernel is an environment that is exported to be used in jupyter lab and notebooks.
 
-## Download miniconda
+## Download miniforge (conda)
 Browse to
 
 https://conda-forge.org/download
@@ -27,7 +27,7 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 **OBS!** On BAND make sure you download it directly to your home directory. ```wget``` will download to your current working directory but your browser might choose location for you!
 
 
-## Install miniconda
+## Install miniforge (conda)
 Execute the following in a terminal.
 
 ```
