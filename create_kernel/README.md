@@ -1,16 +1,18 @@
-# Python environments/Kernels
+# Python environments and kernels
 
-## What is a kernel/Environment
-A kernel (or environment) is a specific setup of python version, modules and other installed software that can be reused, repeated and distributed.
+## What is an environment
+
+An environment is a specific setup of python version, modules and other installed software that can be reused, repeated and distributed.
 
 It allows you, in a convenient way, to have multiple versions of python and modules installed.
 
-Environements can be "activted" when they should be used and "deactivated" when not needed anymore.
+Environments can be "activted" when they should be used and "deactivated" when they are not needed anymore.
 
-An environment can be stored as a file and distributed to other people who want to try your experiments or run your code.
+An environment can be stored as a single file and distributed to other people who want to try your experiments or run your code.
 
+A kernel is an environment that is exported to be used in jupyter lab and notebooks.
 
-## Download miniconda
+## Download miniforge (conda)
 Browse to
 
 https://conda-forge.org/download
@@ -25,7 +27,7 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 **OBS!** On BAND make sure you download it directly to your home directory. ```wget``` will download to your current working directory but your browser might choose location for you!
 
 
-## Install miniconda
+## Install miniforge (conda)
 Execute the following in a terminal.
 
 ```
