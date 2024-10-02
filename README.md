@@ -20,7 +20,7 @@ Material for the eRImote python course from the CCI team in Gothenburg
 # Day 1 Introduction
 
 ## Introduction to Jupyter and Python for bioimage analysis
-[Introduction to Jupyter](intro_jupyter/README.md)
+[Introduction to Jupyter](./intro_jupyter/README.md)
 
 
 ## How to create your own kernel
@@ -29,6 +29,6 @@ Material for the eRImote python course from the CCI team in Gothenburg
 ## Introduction to microscopy images – images as scientific data I/O
 
 
-## Bioimage analysis workflow
+## Bioimage analysis workflow – a primer
 
-Material will be based on this book: https://github.com/CamachoDejay/MyFavouriteBIAStool_NEUBIAS/blob/main/Example.ipynb
+[Bioimage analysis workflow](./bias_workflow/README.md)
