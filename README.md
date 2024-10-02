@@ -20,7 +20,7 @@ Material for the eRImote python course from the CCI team in Gothenburg
 # Day 1 Introduction
 
 ## Introduction to Jupyter and Python for bioimage analysis
-[Introduction to Jupyter](into_jupyter/README.md)
+[Introduction to Jupyter](intro_jupyter/README.md)
 
 
 ## How to create your own kernel
