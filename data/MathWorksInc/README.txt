@@ -1,0 +1,1 @@
+The rice.tif image is a sample image provided by MATLAB, a product of The MathWorks, Inc.

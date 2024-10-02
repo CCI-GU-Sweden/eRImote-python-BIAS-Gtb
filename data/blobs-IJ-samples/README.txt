@@ -1,0 +1,1 @@
+The blobs image is a built-in sample image in ImageJ/Fiji, commonly referred to as "Blobs (25K)".
