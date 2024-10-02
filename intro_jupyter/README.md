@@ -1,5 +1,47 @@
 # Introduction to Jupyter and Python for Bioimage Analysis
 
+# Table of Contents
+
+1. [Introduction to Jupyter and Python for Bioimage Analysis](#introduction-to-jupyter-and-python-for-bioimage-analysis)
+    - [Opening Jupyter Lab in the BAND Environment](#opening-jupyter-lab-in-the-band-environment)
+    - [Jupyter Lab Web Interface Overview](#jupyter-lab-web-interface-overview)
+2. [Create Your Own Jupyter Notebook](#create-your-own-jupyter-notebook)
+3. [Exercise 01: Understanding Jupyter Cell Types](#exercise-01-understanding-jupyter-cell-types)
+    - [Step 1.1: Create a Code Cell](#step-11-create-a-code-cell)
+    - [Step 1.2: Create a Markdown Cell](#step-12-create-a-markdown-cell)
+    - [Recap 1](#recap-1)
+4. [Exercise 02: Hello World and Basic Programming Concepts](#exercise-02-hello-world-and-basic-programming-concepts)
+    - [Step 2.1: Create a Hello World Program](#step-21-create-a-hello-world-program)
+    - [Step 2.2: Understanding Variables and Strings](#step-22-understanding-variables-and-strings)
+    - [Step 2.3: Dynamic Programming – Modifying and Rerunning Cells](#step-23-dynamic-programming-modifying-and-rerunning-cells)
+    - [Step 2.4: String Concatenation in the print() Statement](#step-24-string-concatenation-in-the-print-statement)
+    - [Recap 2](#recap-2)
+5. [Exercise 03: Arithmetic, Variables, NumPy, and Formatted Strings](#exercise-03-arithmetic-variables-numpy-and-formatted-strings)
+    - [Step 3.1: Simple Arithmetic and Checking Variable Types](#step-31-simple-arithmetic-and-checking-variable-types)
+    - [Step 3.2: Introduction to f-Strings](#step-32-introduction-to-f-strings)
+    - [Step 3.3: Variables with Integers and Floats](#step-33-variables-with-integers-and-floats)
+    - [Step 3.4: Using NumPy for Mean and Standard Deviation](#step-34-using-numpy-for-mean-and-standard-deviation)
+    - [Step 3.5: Using f-Strings for Formatted Output](#step-35-using-f-strings-for-formatted-output)
+    - [Recap 3](#recap-3)
+6. [Exercise 04: Handling File Paths, Reading Images, and Plotting with Matplotlib](#exercise-04-handling-file-paths-reading-images-and-plotting-with-matplotlib)
+    - [Step 4.1: Handling File Paths with Path](#step-41-handling-file-paths-with-path)
+    - [Step 4.2: Reading Images Using skimage.io](#step-42-reading-images-using-skimageio)
+    - [Step 4.3: Visualizing the Image with matplotlib](#step-43-visualizing-the-image-with-matplotlib)
+    - [Recap 4](#recap-4)
+7. [Exercise 05: Calculating Parameters from an Image](#exercise-05-calculating-parameters-from-an-image)
+    - [Step 5.1: Load the Image](#step-51-load-the-image)
+    - [Step 5.2: Calculate the Number of Pixels](#step-52-calculate-the-number-of-pixels)
+    - [Step 5.3: Calculate Min, Max, and Mean Intensity Values](#step-53-calculate-min-max-and-mean-intensity-values)
+    - [Step 5.4: Determine the Data Type of the Image](#step-54-determine-the-data-type-of-the-image)
+    - [Recap 5](#recap-5)
+8. [Exercise 06: Extracting Information from File Names and Storing in a DataFrame](#exercise-06-extracting-information-from-file-names-and-storing-in-a-dataframe)
+    - [Step 6.1: Iterating Over Files and Filtering Based on c_info or time_info](#step-61-iterating-over-files-and-filtering-based-on-c_info-or-time_info)
+    - [Step 6.2: Creating a Function to Extract c_info and time_info](#step-62-creating-a-function-to-extract-c_info-and-time_info)
+    - [Step 6.3: Storing the Information in a pandas DataFrame](#step-63-storing-the-information-in-a-pandas-dataframe)
+    - [Recap 6](#recap-6)
+
+
+
 ## Opening Jupyter Lab in the BAND Environment:
 
 The BAND team has pre-installed Jupyter Lab on the virtual machines you are using. We will use this setup to get started quickly. In the next session, we will cover how to install and configure Jupyter Lab on your own virtual machines and, later, on your personal devices.
@@ -52,11 +94,11 @@ To enable tab completion for file paths, it's a good idea to save your notebook 
 
 Once saved, you are ready to start working in your own Jupyter Notebook!
 
-## Exercise: Understanding Jupyter Cell Types
+## Exercise 01: Understanding Jupyter Cell Types
 
 In Jupyter notebooks, there are two primary cell types: **Code Cells** and **Markdown Cells**. In this exercise, we will create one of each.
 
-### Step 1: Create a Code Cell
+### Step 1.1: Create a Code Cell
 
 1. In your notebook, ensure the current cell is a **code cell** (the default).
 2. In this cell, type a simple arithmetic operation. For example:
@@ -70,7 +112,7 @@ In Jupyter notebooks, there are two primary cell types: **Code Cells** and **Mar
 
 You should see the result of the operation, `12`, displayed below the cell.
 
-### Step 2: Create a Markdown Cell
+### Step 1.2: Create a Markdown Cell
 
 1. Now, create a new cell by clicking the `+` button on the toolbar or by pressing `B` (with the current cell selected).
 2. Change this new cell type to **Markdown** by either:
@@ -93,7 +135,7 @@ You should see the result of the operation, `12`, displayed below the cell.
 
 You should now see a nicely formatted heading and list.
 
-### Recap
+### Recap 1
 
 - **Code Cells**: Used for writing and executing code (e.g., Python).
 - **Markdown Cells**: Used for writing formatted text, explanations, and documentation.
@@ -101,11 +143,11 @@ You should now see a nicely formatted heading and list.
 Try switching between code and markdown cells in your notebook to get familiar with both!
 
 
-## Exercise: Hello World and Basic Programming Concepts
+## Exercise 2: Hello World and Basic Programming Concepts
 
 In this exercise, we will learn the basics of variables, strings, and print statements in Python. We'll also practice running and rerunning cells in Jupyter to see how the output changes dynamically.
 
-### Step 1: Create a Hello World Program
+### Step 2.1: Create a Hello World Program
 
 1. In a new **code cell**, type the following code to print "Hello, World!":
 
@@ -119,7 +161,7 @@ In this exercise, we will learn the basics of variables, strings, and print stat
    - When you press `Shift + Enter`, it will execute the current cell and automatically create a new cell below it. This is a quick way to run code and immediately continue working.
    - You should see the text `Hello, World!` displayed below the cell as the output.
 
-### Step 2: Understanding Variables and Strings
+### Step 2.2: Understanding Variables and Strings
 
 1. In the next **code cell**, create a variable to store the string "World" and print it. Type the following:
 
@@ -137,7 +179,7 @@ In this exercise, we will learn the basics of variables, strings, and print stat
 
 3. Variables store values that can be used later in the program. In this case, `message` stores the string `"World"` and is used in the `print` statement.
 
-### Step 3: Dynamic Programming – Modifying and Rerunning Cells
+### Step 2.3: Dynamic Programming – Modifying and Rerunning Cells
 
 1. Change the value of the `message` variable to a different string. For example:
 
@@ -154,7 +196,7 @@ In this exercise, we will learn the basics of variables, strings, and print stat
 
 3. This demonstrates how you can change the contents of a cell and rerun it to see the new output.
 
-### Step 4: String Concatenation in the print() Statement
+### Step 2.4: String Concatenation in the print() Statement
 
 1. In Python, you can combine (or concatenate) strings together in a `print()` statement. Let’s see an example. In a new code cell, type:
 
@@ -177,7 +219,7 @@ In this exercise, we will learn the basics of variables, strings, and print stat
    - We are combining the string stored in `greeting` with a space `" "` and then the string stored in `subject`, followed by an exclamation mark `"!"`.
    - This method of combining strings is useful when you want to dynamically build strings using variables.
 
-### Recap
+### Recap 2
 
 - **Variables**: Store values like strings, numbers, etc., and can be reused in the program.
 - **Strings**: Text enclosed in quotes (e.g., `"Hello, World!"`).
@@ -188,7 +230,7 @@ In this exercise, we will learn the basics of variables, strings, and print stat
 Feel free to experiment by changing the variables and running the cells again!
 
 
-## Exercise: Arithmetic, Variables, NumPy, and Formatted Strings
+## Exercise 3: Arithmetic, Variables, NumPy, and Formatted Strings
 
 In this exercise, we will explore:
 - Simple arithmetic operations
@@ -197,7 +239,7 @@ In this exercise, we will explore:
 - Using NumPy to calculate the mean and standard deviation of a one-dimensional array (vector)
 - Using `f-strings` to print formatted messages
 
-### Step 1: Simple Arithmetic and Checking Variable Types
+### Step 3.1: Simple Arithmetic and Checking Variable Types
 
 1. Create a new **code cell** and type the following code to perform some basic arithmetic and check variable types:
 
@@ -229,7 +271,7 @@ In this exercise, we will explore:
     - `addition` is of type `int` because it results from adding two integers.
     - `division` is of type `float` because division always returns a floating-point number in Python.
 
-### Step 2: Introduction to `f-Strings`
+### Step 3.2: Introduction to `f-Strings`
 
 1. Next, let’s introduce `f-strings`. An `f-string` allows you to embed expressions inside string literals, using curly braces `{}`.
 
@@ -251,7 +293,7 @@ In this exercise, we will explore:
    - The `f` before the string allows you to embed variables directly into the string by placing them inside curly braces `{}`.
    - This is a convenient way to format output in Python.
 
-### Step 3: Variables with Integers and Floats
+### Step 3.3: Variables with Integers and Floats
 
 1. Now, let’s further explore variables with different types. Create a new code cell and add the following:
 
@@ -274,7 +316,7 @@ In this exercise, we will explore:
     The type of float_var is: <class 'float'>
     ```
 
-### Step 4: Using NumPy for Mean and Standard Deviation
+### Step 3.4: Using NumPy for Mean and Standard Deviation
 
 1. First, ensure you have NumPy available by importing it in a new **code cell**:
 
@@ -299,7 +341,7 @@ In this exercise, we will explore:
 
 3. Run the cell to see the mean and standard deviation printed.
 
-### Step 5: Using f-Strings for Formatted Output
+### Step 3.5: Using f-Strings for Formatted Output
 
 1. Now, let’s use `f-strings` to display the mean and standard deviation in a formatted message. In a new **code cell**, type the following:
 
@@ -314,7 +356,7 @@ In this exercise, we will explore:
     The mean value is 19.63 ± 6.37
     ```
 
-### Recap
+### Recap 3
 
 - **Arithmetic Operations**: You learned basic arithmetic like addition, subtraction, multiplication, and division.
 - **Checking Variable Types**: Use `print(type(variable))` to check whether a variable is an integer, float, etc.
@@ -324,14 +366,14 @@ In this exercise, we will explore:
 Feel free to experiment by changing the array values and rerunning the cells to see how the mean and standard deviation change!
 
 
-## Exercise: Handling File Paths, Reading Images, and Plotting with Matplotlib
+## Exercise 4: Handling File Paths, Reading Images, and Plotting with Matplotlib
 
 In this exercise, we will:
 1. Introduce how to handle file paths using `Path` from the `pathlib` module.
 2. Use `skimage.io` to read an image into a NumPy array.
 3. Visualize the image using `matplotlib`.
 
-### Step 1: Handling File Paths with `Path`
+### Step 4.1: Handling File Paths with `Path`
 
 In Python, it's important to handle file paths correctly, especially when working with different operating systems. The `Path` class from the `pathlib` module provides an easy way to handle file system paths.
 
@@ -352,7 +394,7 @@ In Python, it's important to handle file paths correctly, especially when workin
 
     If the image file exists at the specified path, it will return `True`. Otherwise, it will return `False`. If the file doesn’t exist, make sure to adjust the path to the correct location.
 
-### Step 2: Reading Images Using `skimage.io`
+### Step 4.2: Reading Images Using `skimage.io`
 
 Now that we’ve handled the file path, let’s read the image file into a NumPy array using `skimage.io`.
 
@@ -380,7 +422,7 @@ Now that we’ve handled the file path, let’s read the image file into a NumPy
    - The `imread()` function reads the image into a NumPy array (also known as a matrix).
    - The shape tells us the dimensions of the image, where the first value is the height and the second is the width.
 
-### Step 3: Visualizing the Image with `matplotlib`
+### Step 4.3: Visualizing the Image with `matplotlib`
 
 Now that we have loaded the image into a NumPy array, let's visualize it using `matplotlib`.
 
@@ -409,7 +451,7 @@ Now that we have loaded the image into a NumPy array, let's visualize it using `
 
 
 
-### Step 4: Recap
+### Recap 4
 
 - **Path Handling**: We used `Path` from the `pathlib` module to handle file paths and check if the file exists.
 - **Reading Images**: The `skimage.io.imread()` function was used to read the image into a NumPy array, which represents the image as a matrix of pixel values.
@@ -418,14 +460,14 @@ Now that we have loaded the image into a NumPy array, let's visualize it using `
 Feel free to experiment by using different images and paths to see how the process works with various file formats!
 
 
-## Exercise: Calculating Parameters from an Image
+## Exercise 5: Calculating Parameters from an Image
 
 In this exercise, we will:
 1. Calculate basic parameters from an image, such as the number of pixels, minimum, maximum, and mean intensity values.
 2. Check the data type of the image using NumPy.
 3. Print the results using `f-strings`.
 
-### Step 1: Load the Image
+### Step 5.1: Load the Image
 
 1. First, let’s load the image file into a NumPy array using `skimage.io`. Create a new **code cell** and type the following:
 
@@ -449,7 +491,7 @@ In this exercise, we will:
 
 2. Run the cell to visualize the image.
 
-### Step 2: Calculate the Number of Pixels
+### Step 5.2: Calculate the Number of Pixels
 
 1. Next, calculate the total number of pixels in the image using the `.size` attribute of the NumPy array.
 
@@ -462,7 +504,7 @@ In this exercise, we will:
 
 2. Run the cell. This will print the total number of pixels in the image.
 
-### Step 3: Calculate Min, Max, and Mean Intensity Values
+### Step 5.3: Calculate Min, Max, and Mean Intensity Values
 
 1. In a new **code cell**, calculate the minimum, maximum, and mean intensity values of the image using NumPy functions:
 
@@ -488,7 +530,7 @@ In this exercise, we will:
 
     - The `mean_val` is rounded to two decimal places using `.2f` for better readability.
 
-### Step 4: Determine the Data Type of the Image
+### Step 5.4: Determine the Data Type of the Image
 
 1. The image data is stored as a NumPy array, and each pixel has a specific data type. To check the data type of the array, use the `.dtype` attribute.
 
@@ -500,7 +542,7 @@ In this exercise, we will:
 
 2. Run the cell. You will see the data type of the image printed (for example, `uint16` for unsigned 16-bit integers).
 
-### Step 5: Recap
+### Recap 5
 
 - **Number of Pixels**: The `.size` attribute of a NumPy array gives the total number of elements (pixels) in the array.
 - **Min, Max, Mean Intensity**: The `.min()`, `.max()`, and `.mean()` functions provide basic statistical measures of the image pixel intensities.
@@ -509,7 +551,7 @@ In this exercise, we will:
 
 Feel free to experiment by loading different images and calculating their parameters!
 
-## Exercise: Extracting Information from File Names and Storing in a DataFrame
+## Exercise 6: Extracting Information from File Names and Storing in a DataFrame
 
 In this exercise, you will:
 1. Iterate over a list of `.tif` files and filter them based on channel information (`c_info`) or time information (`time_info`).
@@ -517,7 +559,7 @@ In this exercise, you will:
 3. Store the file paths and the extracted information in a `pandas` DataFrame for further analysis.
 
 
-### Step 1: Iterating Over Files and Filtering Based on `c_info` or `time_info`
+### Step 6.1: Iterating Over Files and Filtering Based on `c_info` or `time_info`
 
 1. **Iterate over the files in a folder** and filter only the files that:
    - Have a `.tif` extension.
@@ -550,7 +592,7 @@ In this exercise, you will:
        print(file.name)
 
 
-### Step 2: Creating a Function to Extract c_info and time_info
+### Step 6.2: Creating a Function to Extract c_info and time_info
 1. **Create a function that will extract the c_info and time_info from the file name using if-elif statements.**
 
     ```python
@@ -587,7 +629,7 @@ In this exercise, you will:
     
 Test the function on a few files to ensure it works as expected.
 
-### Step 3: Storing the Information in a pandas DataFrame
+### Step 6.3: Storing the Information in a pandas DataFrame
 1. Now that you have the c_info and time_info extracted for each file, create a pandas DataFrame to store this information along with the file path.
 
     ```python
@@ -615,7 +657,7 @@ Test the function on a few files to ensure it works as expected.
     * c_info: The channel information (C1, C2, C3).
     * time_info: The time under insult (37d, 28d24h, 18d24h).
 
-### Step 4: Recap
+### Recap 6
 - **Iteration:** You used Path.iterdir() and list comprehensions to iterate over files in a folder and filter them by channel and time.
 - **Function:** You created a simple function to extract c_info and time_info from the file name.
 - **DataFrame:** You used pandas to store the extracted information in a DataFrame, which can be used for further analysis.
