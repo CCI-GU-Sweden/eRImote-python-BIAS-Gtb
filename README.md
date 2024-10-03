@@ -24,10 +24,10 @@ Material for the eRImote python course from the CCI team in Gothenburg
 
 
 ## How to create your own kernel
-[How to create an environment and kernel](create_kernel/README.md)
+[How to create an environment and kernel](./create_kernel/README.md)
 
 ## Introduction to microscopy images – images as scientific data I/O
-
+[Intro to microscopy images](./images_as_scientific-data/README.md)
 
 ## Bioimage analysis workflow – a primer
 
