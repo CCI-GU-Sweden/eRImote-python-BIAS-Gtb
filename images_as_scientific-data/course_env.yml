@@ -1,0 +1,16 @@
+name: Course_ImageIO
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - ipykernel
+  - ipython
+  - matplotlib
+  - stackview
+  - scikit-image
+  - tifffile
+  - xmltodict
+  - pip:
+      - pylibczirw
+      - pyometiff
