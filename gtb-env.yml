@@ -1,0 +1,27 @@
+name: gtb-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  # jupyter related
+  - jupyterlab
+  - ipykernel
+  - ipython
+  - ipywidgets
+  # image analysis
+  - stackview
+  - scikit-image
+  # data proc
+  - numpy
+  - scipy
+  - pandas
+  # plotting
+  - matplotlib
+  - seaborn
+  # xml
+  - xmltodict
+  - pip
+  # pip
+  - pip:
+    - pylibczirw
+    - pyometiff
