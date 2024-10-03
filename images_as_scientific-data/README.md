@@ -7,6 +7,8 @@ The following packages are required to be installed (already on BAND!)
 > pip install pyometiff
 > 
 > pip install pylibCZIrw
+>
+> pip install tifffile
 > 
 > conda install conda-forge::matplotlib
 > 
