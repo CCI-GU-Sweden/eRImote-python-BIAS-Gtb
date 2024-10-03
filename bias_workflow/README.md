@@ -151,6 +151,7 @@ In our case, since the objects have well-defined shapes and are nearly separated
 ##### Option 1: Erosion
 ```python
 from skimage.morphology import isotropic_erosion
+from skimage.segmentation import watershed
 from scipy import ndimage as ndi
 
 eroded_bw = isotropic_erosion(bw_otsu, radius=4)
@@ -170,6 +171,7 @@ Morphological opening is a process that involves an erosion followed by a dilati
 
 ```python
 from skimage.morphology import binary_opening, disk
+from skimage.segmentation import watershed
 from scipy import ndimage as ndi
 
 eroded_bw = isotropic_erosion(bw_otsu, radius=2)
