@@ -44,7 +44,7 @@ Let’s try to segment the image using a simple global thresholding method. We w
 Now that you have explored the image values with the picker tool, choose a reasonable threshold value. All pixels above or below this value can be classified as "rice" (foreground) or background.
 
 ```python
-th_val = 100
+th_val = your_value_here
 bw = img > th_val
 plt.imshow(bw, cmap="gray")
 ```
