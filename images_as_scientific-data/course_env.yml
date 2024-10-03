@@ -1,6 +1,5 @@
 name: Course_python3-10
 channels:
-  - defaults
   - conda-forge
 dependencies:
   - _libavif_api=1.1.1=h57928b3_1
