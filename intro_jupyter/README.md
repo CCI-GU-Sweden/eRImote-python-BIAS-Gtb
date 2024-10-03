@@ -162,6 +162,11 @@ In this exercise, we will learn the basics of variables, strings, and print stat
    - When you press `Shift + Enter`, it will execute the current cell and automatically create a new cell below it. This is a quick way to run code and immediately continue working.
    - You should see the text `Hello, World!` displayed below the cell as the output.
 
+**Note**: JupyterLab has a built-in "Auto Close Brackets" feature. You can enable this by navigating to:
+
+`Settings -> Settings Editor -> Notebook -> Auto Closing Brackets`
+
+
 ### Step 2.2: Understanding Variables and Strings
 
 1. In the next **code cell**, create a variable to store the string "World" and print it. Type the following:
@@ -394,6 +399,29 @@ In Python, it's important to handle file paths correctly, especially when workin
 2. Run the cell using `Shift + Enter`.
 
     If the image file exists at the specified path, it will return `True`. Otherwise, it will return `False`. If the file doesn’t exist, make sure to adjust the path to the correct location.
+
+3. Let’s retrieve some additional information from the file:
+    
+    **Basic info about the file**:
+    ```python
+    print(tif_path.parent)  # The parent directory
+    print(tif_path.stem)    # The file name without the extension
+    print(tif_path.suffix)  # The file extension
+    ```
+
+    **Check if it is a folder or a file**:
+    ```python
+    print(tif_path.is_file())  # Checks if it's a file
+    print(tif_path.is_dir())   # Checks if it's a directory
+    ```
+
+    **Using the file path to find other files**:
+    It is common to use a file’s parent directory to reference other files. For example:
+    ```python
+    another_tif = tif_path.parent.joinpath('test.tif')
+    print(another_tif)
+    print(another_tif.exists())  # Check if the other file exists
+    ```
 
 ### Step 4.2: Reading Images Using `skimage.io`
 
