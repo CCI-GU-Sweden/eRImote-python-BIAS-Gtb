@@ -344,6 +344,8 @@ In this exercise, we will explore:
     print(f"Mean: {mean_val}")
     print(f"Standard Deviation: {std_val}")
     ```
+    **Note**: During the creation of the NumPy array, we use the syntax `[a, b, c]`. In Python, this represents a list, which we will cover in more detail later.
+
 
 3. Run the cell to see the mean and standard deviation printed.
 
@@ -590,35 +592,131 @@ In this exercise, you will:
 
 ### Step 6.1: Iterating Over Files and Filtering Based on `c_info` or `time_info`
 
-1. **Iterate over the files in a folder** and filter only the files that:
+1. **Iterate over the files in a folder manually** 
+
+    1.1 **Manually Create a List of Files** 
+
+    ```python
+    from pathlib import Path
+
+    # Step 1: Create an empty list to store file paths
+    file_list = []
+    print(len(file_list))  # Check the number of files in the list, it should return 0
+    ```
+
+    1.2 **Append File Paths to the List**: We will now append file paths to our `file_list` manually. You can keep track of how many files you have added by using `len(file_list)`.
+
+    ```python
+    # Append files to the list
+    file_list.append(Path("./data/idr0089-example/C1-AC16_Rep1_18d24h_HNRNPC488_NUP594_04_SIR_THR_ALN-1_c.tif"))
+    print(len(file_list))  # Check the number of files, it should return 1
+
+    file_list.append(Path("./data/idr0089-example/C1-AC16_Rep1_28d24h_HNRNPC488_NUP594_08_SIR_THR_ALN-1.tif"))
+    file_list.append(Path("./data/idr0089-example/C1-AC16_Rep1_37d_HNRNPC488_NUP594_09_SIR_THR_ALN-1_c.tif"))
+    print(len(file_list))  # Now it should return 3
+
+    ```
+
+    1.3 **Iterate Over the List and Print Each File Path** We will iterate through the list of file paths and print each one. This will help you understand how to handle and display the paths of files stored in a list.
+
+    ```python
+    # Iterate over the list and print each file path
+    for item in file_list:
+        print(item)
+    ```
+    The output should look like:
+    ```bash
+    data/idr0089-example/C1-AC16_Rep1_18d24h_HNRNPC488_NUP594_04_SIR_THR_ALN-1_c.tif
+    data/idr0089-example/C1-AC16_Rep1_28d24h_HNRNPC488_NUP594_08_SIR_THR_ALN-1.tif
+    data/idr0089-example/C1-AC16_Rep1_37d_HNRNPC488_NUP594_09_SIR_THR_ALN-1_c.tif
+    ```
+
+2. **Iterating Over Files in a Folder with `Path`**
+
+    2.1 **Automatically Iterate Over the Files in a Folder**: 
+    
+    Instead of manually adding file paths, we can automate the process by iterating over the files in a folder using `Path.iterdir()` from the `pathlib` module. This will allow us to collect all files in a specified directory.
+
+    ```python
+    # Define the folder containing the data
+    data_folder = Path("./data/idr0089-example/")
+
+    # Step 1: Create an empty list to store file paths
+    file_list = []
+
+    # Step 2: Iterate over the files in the folder and append them to the list
+    for item in data_folder.iterdir():
+        file_list.append(item)
+
+    # Step 3: Iterate over the list and print each file path
+    for item in file_list:
+        print(item)
+    ```
+    2.2 **Add a Filter for the File Extension**
+
+    ```python
+    data_folder = Path("./data/idr0089-example/")
+
+    # create empty list
+    file_list = []
+
+    # Iterate over the folder, only add files with ".tif" extension
+    for item in data_folder.iterdir():
+        if item.suffix == ".tif":
+            file_list.append(item)
+    
+    # Print the filtered list of files
+    for item in file_list:
+        print(item)
+    ```
+
+    2.3 **Now the Elegant List Comprehension**
+
+    We can simplify the process of filtering and collecting files by using a list comprehension, which combines the loop and filtering into one concise line of code.
+
+    ```python
+    tif_list = [item for item in data_folder.iterdir() if item.suffix == ".tif"]
+    for item in file_list:
+        print(item)
+    ```
+
+    **What is a List Comprehension?**: A list comprehension is a concise way to create lists in Python. It combines the process of looping through an iterable and applying a condition or transformation in a single line. For example:
+    ```python
+    # List comprehension to create a list of squares
+    squares = [x**2 for x in range(10)]
+    ```
+    In the above example, the list `squares` is created by squaring each number from 0 to 9. It's a more compact and readable way of achieving the same result as using a `for` loop and `append()` method.
+
+3. **Iterate over the files in a folder** and filter only the files that:
    - Have a `.tif` extension.
    - Start with a specific channel (e.g., `C1`) or contain specific time information (e.g., `37d`).
 
    ```python
-   from pathlib import Path
+    from pathlib import Path
 
-   # Define the path to the data folder
-   data_folder = Path("./data/public-repos/")
+    # Define the path to the data folder
+    data_folder = Path("./data/public-repos/")
 
-   # List comprehension to iterate over files and check for .tif extension
-   tif_files = [file for file in data_folder.iterdir() if file.suffix == '.tif']
+    # List comprehension to iterate over files and check for .tif extension
+    tif_files = [file for file in data_folder.iterdir() if file.suffix == '.tif']
 
-   # Print all .tif file names
-   for tif_file in tif_files:
-       print(tif_file.name)
+    # Print all .tif file names
+    for tif_file in tif_files:
+        print(tif_file.name)
 
-   # Now filter the files by channel (e.g., C1) or time (e.g., 37d)
-   c1_files = [file for file in tif_files if file.name.startswith("C1")]
-   time_37d_files = [file for file in tif_files if "37d" in file.name]
+    # Now filter the files by channel (e.g., C1) or time (e.g., 37d)
+    c1_files = [file for file in tif_files if file.name.startswith("C1")]
+    time_37d_files = [file for file in tif_files if "37d" in file.name]
 
-   # Print the filtered file names
-   print("\nFiltered by channel (C1):")
-   for file in c1_files:
-       print(file.name)
+    # Print the filtered file names
+    print("\nFiltered by channel (C1):")
+    for file in c1_files:
+        print(file.name)
 
-   print("\nFiltered by time (37d):")
-   for file in time_37d_files:
-       print(file.name)
+    print("\nFiltered by time (37d):")
+    for file in time_37d_files:
+        print(file.name)
+    ```
 
 
 ### Step 6.2: Creating a Function to Extract c_info and time_info
