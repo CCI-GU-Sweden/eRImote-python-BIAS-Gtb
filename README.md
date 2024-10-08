@@ -16,6 +16,12 @@ Material for the eRImote python course from the CCI team in Gothenburg
 | 15:45-17:00         | Bioimage analysis workflow – a primer  | Building a workflow/pipeline                        | Accessible tools to use DL for image analysis          |
 | 17:00-17:30         | Optional Q&A for BST timezone locations                 | Optional Q&A for BST timezone locations             | Optional Q&A for BST timezone locations                |
 
+# Day 2 Introduction
+https://tinyurl.com/Py-BIA-remote-day2
+
+# Day 3 Introduction
+https://github.com/brunomsaraiva/BioimageCourseGIMM
+
 
 # Day 1 Introduction
 
