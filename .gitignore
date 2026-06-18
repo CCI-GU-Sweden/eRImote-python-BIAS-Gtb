@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# JupyterLab workspace settings
+.jupyter/lab/workspaces/
+.jupyter/lab/user-settings/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Conda environments
+.env
+.conda/
