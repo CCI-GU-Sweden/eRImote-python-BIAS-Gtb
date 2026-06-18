@@ -1,5 +1,51 @@
 # Python environments and kernels
 
+## Install git
+### Windows
+Install Git from:
+
+https://git-scm.com/install/
+
+During installation, keep the default options.
+
+The installer also provides Git Bash, a terminal application that behaves similarly to terminals on Linux and macOS. 
+For this course we recommend using Git Bash rather than PowerShell.
+Open Git Bash and verify installation by running:
+```
+git --version
+```
+
+### macOS
+Git is often already installed on macOS. Open a Terminal and check running:
+```
+git --version
+```
+Alternatively, if you use Homebrew:
+```
+brew install git
+```
+### Linux
+Open a terminal and run 
+```
+sudo apt install git
+```
+Verify the installation:
+```
+git --version
+```
+Once Git is installed, navigate to https://github.com/Euro-BioImaging/evolve-python-hybrid-course
+you should see something like this. 
+![git-example](./git.png)
+Click the green button and copy the https link.
+
+![git-example2](./code.png)
+
+Now navigate to the directory where you want to store the course files and run:
+```
+git clone <https link>
+```
+This will create a local copy of the repository on your computer.
+
 ## What is an environment
 
 An environment is a specific setup of python version, modules and other installed software that can be reused, repeated 
@@ -78,7 +124,7 @@ At the beginning of the terminal prompt you should see (name_of_env). See exampl
 
 ![prompt](./prompt-example.png)
 
-## Installing python modules in your environment with Pip
+## Installing python modules in your environment
 To install python modules we can use a conda or a program called **pip** . It is preferable to use conda
 to install most packages, however, not all packages are present in conda which is when we will use **pip**.
 For example, if we want to install the package **pandas** we can do so by running
@@ -104,7 +150,7 @@ Python installation.
 ### Install jupyter tools
 In a terminal, with your conda environment active, type
 ```
-pip install jupyterlab ipykernel ipython
+conda install jupyterlab ipykernel ipython
 ```
 to install jupyter tools
 
@@ -112,7 +158,7 @@ Start jupyter lab either by typing
 ```
 jupyter lab
 ```
-or from menu. Notice that your environment is NOT available as kernel :(
+Notice that your environment is NOT available as kernel :(
 
 Exit jupyter lab.
 
@@ -201,55 +247,11 @@ It allows you for example to:
 
 We can use **git** to get all the files needed for the course locally on our machine.
 
-## Install git
-### Windows
-Install Git from:
-
-https://git-scm.com/install/
-
-During installation, keep the default options.
-
-The installer also provides Git Bash, a terminal application that behaves similarly to terminals on Linux and macOS. 
-For this course we recommend using Git Bash rather than PowerShell.
-Open Git Bash and verify installation by running:
-```
-git --version
-```
-Alternatively, if you use Homebrew:
-```
-brew install git
-```
-Verify the installation:
-```
-git --version
-```
-### macOS
-Git is often already installed on macOS. Open a Terminal and check running:
-```
-git --version
-```
-### Linux
-Open a terminal and run 
-```
-sudo apt install git
-```
-Verify the installation:
-```
-git --version
-```
-Once Git is installed, navigate to the directory where you want to store the course files and run:
-```
-git clone https://github.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb.git
-```
-This will create a local copy of the repository on your computer.
-
 
 ## More information / Documentation
 Documentation for conda/Miniforge can be found here:
 https://conda-forge.org/docs/user/
 
-
-## Return to main course page
-https://github.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb
-
+Documentation for git can be found here:
+https://git-scm.com/docs
 
