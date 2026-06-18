@@ -1,57 +1,99 @@
 # Introduction to Jupyter and Python for Bioimage Analysis
 
+This material introduces the use of **Python** and **Jupyter Lab** for basic bioimage analysis.  
+The course is designed for beginners and focuses on practical exercises using notebooks, image files, and common Python libraries used in image analysis.
+
 # Table of Contents
 
 1. [Introduction to Jupyter and Python for Bioimage Analysis](#introduction-to-jupyter-and-python-for-bioimage-analysis)
-    - [Opening Jupyter Lab in the BAND Environment](#opening-jupyter-lab-in-the-band-environment)
-    - [Jupyter Lab Web Interface Overview](#jupyter-lab-web-interface-overview)
-2. [Create Your Own Jupyter Notebook](#create-your-own-jupyter-notebook)
-3. [Exercise 01: Understanding Jupyter Cell Types](#exercise-01-understanding-jupyter-cell-types)
+2. [What you should do before starting](#what-you-should-do-before-starting)
+3. [Opening Jupyter Lab](#opening-jupyter-lab)
+4. [Create Your Own Jupyter Notebook](#create-your-own-jupyter-notebook)
+5. [Exercise 01: Understanding Jupyter Cell Types](#exercise-01-understanding-jupyter-cell-types)
     - [Step 1.1: Create a Code Cell](#step-11-create-a-code-cell)
     - [Step 1.2: Create a Markdown Cell](#step-12-create-a-markdown-cell)
     - [Recap 1](#recap-1)
-4. [Exercise 02: Hello World and Basic Programming Concepts](#exercise-2-hello-world-and-basic-programming-concepts)
+6. [Exercise 02: Hello World and Basic Programming Concepts](#exercise-02-hello-world-and-basic-programming-concepts)
     - [Step 2.1: Create a Hello World Program](#step-21-create-a-hello-world-program)
     - [Step 2.2: Understanding Variables and Strings](#step-22-understanding-variables-and-strings)
     - [Step 2.3: Dynamic Programming – Modifying and Rerunning Cells](#step-23-dynamic-programming--modifying-and-rerunning-cells)
-    - [Step 2.4: String Concatenation in the print() Statement](#step-24-string-concatenation-in-the-print-statement)
+    - [Step 2.4: String Concatenation in the `print()` Statement](#step-24-string-concatenation-in-the-print-statement)
     - [Recap 2](#recap-2)
-5. [Exercise 03: Arithmetic, Variables, NumPy, and Formatted Strings](#exercise-3-arithmetic-variables-numpy-and-formatted-strings)
+7. [Exercise 03: Arithmetic, Variables, NumPy, and Formatted Strings](#exercise-03-arithmetic-variables-numpy-and-formatted-strings)
     - [Step 3.1: Simple Arithmetic and Checking Variable Types](#step-31-simple-arithmetic-and-checking-variable-types)
     - [Step 3.2: Introduction to f-Strings](#step-32-introduction-to-f-strings)
     - [Step 3.3: Variables with Integers and Floats](#step-33-variables-with-integers-and-floats)
     - [Step 3.4: Using NumPy for Mean and Standard Deviation](#step-34-using-numpy-for-mean-and-standard-deviation)
     - [Step 3.5: Using f-Strings for Formatted Output](#step-35-using-f-strings-for-formatted-output)
     - [Recap 3](#recap-3)
-6. [Exercise 04: Handling File Paths, Reading Images, and Plotting with Matplotlib](#exercise-4-handling-file-paths-reading-images-and-plotting-with-matplotlib)
-    - [Step 4.1: Handling File Paths with Path](#step-41-handling-file-paths-with-path)
-    - [Step 4.2: Reading Images Using skimage.io](#step-42-reading-images-using-skimageio)
-    - [Step 4.3: Visualizing the Image with matplotlib](#step-43-visualizing-the-image-with-matplotlib)
+8. [Exercise 04: Handling File Paths, Reading Images, and Plotting with Matplotlib](#exercise-04-handling-file-paths-reading-images-and-plotting-with-matplotlib)
+    - [Step 4.1: Handling File Paths with `Path`](#step-41-handling-file-paths-with-path)
+    - [Step 4.2: Reading Images Using `skimage.io`](#step-42-reading-images-using-skimageio)
+    - [Step 4.3: Visualizing the Image with Matplotlib](#step-43-visualizing-the-image-with-matplotlib)
     - [Recap 4](#recap-4)
-7. [Exercise 05: Calculating Parameters from an Image](#exercise-5-calculating-parameters-from-an-image)
+9. [Exercise 05: Calculating Parameters from an Image](#exercise-05-calculating-parameters-from-an-image)
     - [Step 5.1: Load the Image](#step-51-load-the-image)
     - [Step 5.2: Calculate the Number of Pixels](#step-52-calculate-the-number-of-pixels)
     - [Step 5.3: Calculate Min, Max, and Mean Intensity Values](#step-53-calculate-min-max-and-mean-intensity-values)
     - [Step 5.4: Determine the Data Type of the Image](#step-54-determine-the-data-type-of-the-image)
     - [Recap 5](#recap-5)
-8. [Exercise 06: Extracting Information from File Names and Storing in a DataFrame](#exercise-6-extracting-information-from-file-names-and-storing-in-a-dataframe)
-    - [Step 6.1: Iterating Over Files and Filtering Based on c_info or time_info](#step-61-iterating-over-files-and-filtering-based-on-c_info-or-time_info)
-    - [Step 6.2: Creating a Function to Extract c_info and time_info](#step-62-creating-a-function-to-extract-c_info-and-time_info)
+10. [Exercise 06: Extracting Information from File Names and Storing in a DataFrame](#exercise-06-extracting-information-from-file-names-and-storing-in-a-dataframe)
+    - [Step 6.1: Iterating Over Files and Filtering Based on `c_info` or `time_info`](#step-61-iterating-over-files-and-filtering-based-on-c_info-or-time_info)
+    - [Step 6.2: Creating a Function to Extract `c_info` and `time_info`](#step-62-creating-a-function-to-extract-c_info-and-time_info)
     - [Step 6.3: Storing the Information in a pandas DataFrame](#step-63-storing-the-information-in-a-pandas-dataframe)
     - [Recap 6](#recap-6)
 
 [Return to main page](https://github.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb)
 
+## What you should do before starting
 
-## Opening Jupyter Lab in the BAND Environment:
+Before starting this part of the course, make sure that you have already installed **Miniforge** or **Miniconda**, and that you have created a Python environment containing the following packages:
 
-The BAND team has pre-installed Jupyter Lab on the virtual machines you are using. We will use this setup to get started quickly. In the next session, we will cover how to install and configure Jupyter Lab on your own virtual machines and, later, on your personal devices.
+- `python=3.10`
+- `jupyterlab`
+- `ipykernel`
+- `ipython`
 
-Once you open Jupyter Lab, you will notice that a kernel has been prepared specifically for this course. Don’t worry too much about understanding what a "kernel" is at this stage. You can think of it as a self-contained installation of Python along with the necessary Python packages that we will use throughout the course. We will cover the topic of kernels in more detail before lunch.
+To check whether Jupyter is correctly installed, open the Miniforge Prompt, activate the environment you created for the course, and run:
 
-1. Go to *Applications*
-2. Go to *Programming*
-3. Select *JupyterLab*
+```bash
+jupyter --version
+```
+You should see output similar to this:
+
+```bash
+Selected Jupyter core packages... 
+IPython : 8.37.0 
+ipykernel : 7.3.0 
+ipywidgets : not installed 
+jupyter_client : 8.9.1 
+jupyter_core : 5.9.1 
+jupyter_server : 2.20.0 
+jupyterlab : 4.5.9 
+nbclient : 0.11.0 
+nbconvert : 7.17.1 
+nbformat : 5.10.4 
+notebook : not installed 
+qtconsole : not installed 
+traitlets : 5.15.1
+```
+The exact version numbers may be slightly different. The important point is that `jupyterlab`, `ipykernel`, and `IPython` are installed in your course environment.
+
+## Opening Jupyter Lab
+
+Open the Miniforge Prompt and activate the environment you created for the course.
+
+Then start Jupyter Lab by running:
+
+```bash
+jupyter lab
+```
+
+A new window or tab should open in your web browser showing the Jupyter Lab interface.
+
+You are now ready to start working with notebooks.
+
+If Jupyter Lab does not open, or if you see an error message, please contact one of the course helpers so they can assist you directly.
 
 ## Jupyter Lab Web Interface Overview
 
@@ -392,7 +434,7 @@ In Python, it's important to handle file paths correctly, especially when workin
     from pathlib import Path
 
     # Define the path to the image file
-    tif_path = Path("./data/blobs.tif")
+    tif_path = Path("./data/blobs-IJ-samples/blobs.tif")
 
     # Check if the file exists at the given path
     print(tif_path.exists())
