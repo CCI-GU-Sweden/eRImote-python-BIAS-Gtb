@@ -76,7 +76,7 @@ conda activate name_of_env
 Now your environment is active and the packages installed (and only those) are available to you.
 At the beginning of the terminal prompt you should see (name_of_env). See example in the picture:
 
-![prompt](create_kernel/prompt-example.png)
+![prompt](./prompt-example.png)
 
 ## Installing python modules in your environment with Pip
 To install python modules we can use a conda or a program called **pip** . It is preferable to use conda
