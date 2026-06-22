@@ -1,5 +1,15 @@
 # Python environments and kernels
 
+## GIT
+Git is a version control system used to track changes in files and collaborate with other people.
+It allows you for example to:
+
+- keep a history of your work
+- recover older versions of files
+- collaborate on projects
+
+We can use **git** to get all the files needed for the course locally on our machine.
+
 ## Install git
 ### Windows
 Install Git from:
@@ -236,17 +246,6 @@ CAVEATS: removing an environment does not remove it as a kernel from jupyter!
 
 * Remove all **_kernels_** you created from jupyter (NOT the original named python3)
 * Remove any conda **_environments_** you created
-
-## GIT
-Git is a version control system used to track changes in files and collaborate with other people.
-It allows you for example to:
-
-- keep a history of your work
-- recover older versions of files
-- collaborate on projects
-
-We can use **git** to get all the files needed for the course locally on our machine.
-
 
 ## More information / Documentation
 Documentation for conda/Miniforge can be found here:
